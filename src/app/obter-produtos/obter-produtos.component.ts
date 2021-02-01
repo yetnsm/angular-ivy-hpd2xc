@@ -18,6 +18,7 @@ export class ObterProdutosComponent implements OnInit {
     this.buscarProdutos();
   }
 
+  // exercicio 1
   buscarProdutos() {
     return this.prod.buscarProdutos().subscribe(
       (res) => {
@@ -26,10 +27,11 @@ export class ObterProdutosComponent implements OnInit {
     );
   }
 
+  // exercicio 3
   deletarProduto(id: HTMLInputElement): any {
-    return this.prod.deletarProduto(id).subscribe(
+    this.prod.deletarProduto(id).subscribe(
       (res) => {
-        this.produtos = res;
+        this.produtos = res.prods;
       }
     );
   }
