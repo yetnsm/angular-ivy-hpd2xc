@@ -18,6 +18,6 @@ export class ProdutoService {
     if(id.value == "") {
       alert("Nenhum produto encontrado.");
     }
-    return this.http.delete<any>(`${this.URL}produtos/{id.value}`);
+    return this.http.delete<any>(`${this.URL}produtos/${id.value}`);
   }
 }
